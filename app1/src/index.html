@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+
+<h2>Search results for: <script>alert('You have been attacked!');</script></h2>
+
+<script>
+// A vulnerable script that gets a query parameter from the URL
+const results = document.getElementById('search-results');
+const userQuery = new URLSearchParams(window.location.search).get('query');
+results.innerHTML = `You searched for: ${userQuery}`;
+  
+</script>
+
+</body>
+</html>
